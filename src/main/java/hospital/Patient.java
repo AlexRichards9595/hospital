@@ -1,6 +1,6 @@
 package hospital;
 
-public class Patient {
+public class Patient implements Bleedable {
 	
 	private int bloods = 42;
 
@@ -8,8 +8,8 @@ public class Patient {
 		return bloods;
 	}
 
-	public void removeBlood(int amounts) {
-		bloods -= 1;
+	public void removeBlood(int amount) {
+		bloods -= amount;
 	}
 
 }

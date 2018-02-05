@@ -3,7 +3,6 @@ package hospital;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 
-
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -19,7 +18,36 @@ public class DoctorTest {
 		
 		int bloodsAfter = patient.getBloods();
 		
-		assertEquals(bloodsBefore-bloodsAfter, 1);
-		
+		Assert.assertEquals(bloodsBefore-bloodsAfter, 1);
 	}
+	
+	boolean wasBled = false;
+	public class BleedableDouble implements Bleedable {
+		@Override
+		public void removeBlood(int amount) {
+			wasBled=true;
+		}
+	}
+	
+	@Test
+	public void shouldDrawBloodFromTestDouble() {
+		Doctor underTest = new Doctor();
+		Bleedable patient = new BleedableDouble();
+		
+		underTest.drawBlood(patient);
+		
+		Assert.assertTrue(wasBled);
+	}
+	@Test 
+	public void shouldHaveSalary() {
+		Doctor underTest = new Doctor();
+		
+		int salary = underTest.getSalary();
+	}
+	
+	
+	
+	
+	
+	
 }
