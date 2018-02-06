@@ -1,8 +1,8 @@
 package hospital;
 
-import static org.junit.Assert.assertEquals;
+import static org.hamcrest.Matchers.is;
+import static org.junit.Assert.assertThat;
 
-import org.junit.Assert;
 import org.junit.Test;
 
 public class NurseTest {
@@ -15,7 +15,7 @@ public class NurseTest {
 
 		int salary = underTest.getSalary();
 
-		assertEquals(50000, salary);
+		assertThat(salary, is(50000));
 	}
 
 	boolean wasBled = false;
@@ -33,7 +33,7 @@ public class NurseTest {
 
 		underTest.drawBlood(patient);
 
-		Assert.assertTrue(wasBled);
+		assertThat(wasBled, is(true));
 	}
 
 	@Test
@@ -44,19 +44,19 @@ public class NurseTest {
 		underTest.administerCare(patient);
 		int healthAfter = patient.getHealth();
 
-		assertEquals(healthAfter - healthBefore, 5);
+		assertThat(healthAfter - healthBefore, is(5));
 	}
 
 	@Test
 	public void shouldReturnEmpNumber() {
 		String check = underTest.getEmpNumber();
-		assertEquals("3333", check);
+		assertThat(check, is("3333"));
 	}
 
 	@Test
 	public void shouldReturnEmpName() {
 		String check = underTest.getEmpName();
-		assertEquals("Jackie", check);
+		assertThat(check, is("Jackie"));
 	}
 
 }

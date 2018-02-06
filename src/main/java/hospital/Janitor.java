@@ -6,7 +6,7 @@ public class Janitor extends Employee {
 		this.empNumber = empNumber;
 		this.empName = empName;
 	}
-	
+
 	@Override
 	public int getSalary() {
 		return 40000;

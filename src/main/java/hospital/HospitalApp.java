@@ -14,11 +14,11 @@ public class HospitalApp {
 		hospital.addEmployee(harry);
 		hospital.addEmployee(jackie);
 		hospital.addEmployee(rosie);
-		
+
 		hospital.showPayRates();
-		
+
 		System.out.println();
-		
+
 		hospital.showAllMedicalPersonnel();
 
 	}

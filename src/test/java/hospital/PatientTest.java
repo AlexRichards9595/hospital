@@ -1,6 +1,7 @@
 package hospital;
 
-import static org.junit.Assert.assertEquals;
+import static org.hamcrest.Matchers.is;
+import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
 
@@ -14,7 +15,7 @@ public class PatientTest {
 
 		int currentBloods = patient.getBloods();
 
-		assertEquals(currentBloods, 39);
+		assertThat(currentBloods, is(39));
 	}
 
 	@Test
@@ -25,7 +26,7 @@ public class PatientTest {
 
 		int currentHealth = patient.getHealth();
 
-		assertEquals(Patient.DEFAULT_HEALTH + 10, currentHealth);
+		assertThat(currentHealth, is(Patient.DEFAULT_HEALTH + 10));
 	}
 
 }

@@ -14,7 +14,5 @@ public class SurgeonTest {
 		boolean check = surgeon.getIsOperating();
 		assertTrue(check);
 	}
-	
-	
 
 }
