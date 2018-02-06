@@ -1,5 +1,7 @@
 package hospital;
 
-public interface MedicalDuties extends BloodDrawer {
+public interface MedicalDuties {
+	public void drawBlood(Bleedable patient);
+
 	public void administerCare(Patient patient);
 }

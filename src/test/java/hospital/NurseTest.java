@@ -3,13 +3,17 @@ package hospital;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 public class NurseTest {
+	
+	
+	Nurse underTest = new Nurse("3333", "Jackie");
 
 	@Test
 	public void shouldHaveASalary() {
-		Employee underTest = new Nurse();
+		Employee underTest = new Nurse("3333", "Jackie");
 
 		int salary = underTest.getSalary();
 
@@ -27,7 +31,6 @@ public class NurseTest {
 
 	@Test
 	public void shouldDrawBloodFromTestDouble() {
-		Nurse underTest = new Nurse();
 		Bleedable patient = new BleedableDouble();
 
 		underTest.drawBlood(patient);
@@ -37,7 +40,6 @@ public class NurseTest {
 
 	@Test
 	public void shouldIncreasePatientHealth() {
-		Nurse underTest = new Nurse();
 		Patient patient = new Patient();
 
 		int healthBefore = patient.getHealth();
@@ -46,4 +48,16 @@ public class NurseTest {
 
 		assertEquals(healthAfter - healthBefore, 5);
 	}
+	@Test
+	public void shouldReturnEmpNumber() {
+		String check = underTest.getEmpNumber();
+		assertEquals("3333", check);
+	}
+
+	@Test
+	public void shouldReturnEmpName() {
+		String check = underTest.getEmpName();
+		assertEquals("Jackie", check);
+	}
+
 }
