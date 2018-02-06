@@ -7,7 +7,7 @@ import org.junit.Test;
 
 public class DoctorTest {
 
-	Doctor underTest = new Doctor("1111", "Phil");
+	Doctor underTest = new Doctor("1111", "Phil", "Brain");
 
 	@Test
 	public void shouldDrawBlood() {
@@ -41,7 +41,7 @@ public class DoctorTest {
 
 	@Test
 	public void shouldHaveSalary() {
-		Employee underTest = new Doctor("1111", "Phil");
+		Employee underTest = new Doctor("1111", "Phil", "Brain");
 
 		int salary = underTest.getSalary();
 
@@ -69,6 +69,13 @@ public class DoctorTest {
 	public void shouldReturnEmpName() {
 		String check = underTest.getEmpName();
 		assertEquals("Phil", check);
+	}
+
+	@Test
+	public void shouldReturnSpecialty() {
+		String check = underTest.getSpecialty();
+		assertEquals("Brain", check);
+
 	}
 
 }

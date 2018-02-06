@@ -4,16 +4,16 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-public class SurgeonTest  {
-	
-	Surgeon underTest = new Surgeon("2222", "Harry", true);
-	
+public class SurgeonTest {
+
+	Doctor underTest = new Surgeon("2222", "Harry", "Brain", true);
+
 	@Test
-	public void assertThatSurgeonIsOperating () {
-		boolean check = underTest.getIsOperating();
+	public void assertThatSurgeonIsOperating() {
+		Surgeon surgeon = new Surgeon("2222", "Harry", "Brain", true);
+		boolean check = surgeon.getIsOperating();
 		assertTrue(check);
 	}
-	
 	
 	
 

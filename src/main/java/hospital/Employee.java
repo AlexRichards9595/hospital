@@ -13,5 +13,10 @@ public abstract class Employee {
 	public String getEmpName() {
 		return empName;
 	}
+	
+	@Override
+	public String toString() {
+		return empName;
+	}
 
 }

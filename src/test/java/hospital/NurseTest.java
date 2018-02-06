@@ -3,12 +3,10 @@ package hospital;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 
 public class NurseTest {
-	
-	
+
 	Nurse underTest = new Nurse("3333", "Jackie");
 
 	@Test
@@ -48,6 +46,7 @@ public class NurseTest {
 
 		assertEquals(healthAfter - healthBefore, 5);
 	}
+
 	@Test
 	public void shouldReturnEmpNumber() {
 		String check = underTest.getEmpNumber();

@@ -1,9 +1,8 @@
 package hospital;
 
 public class Nurse extends Employee implements MedicalDuties {
-	
-	
-	public Nurse (String empNumber, String empName) {
+
+	public Nurse(String empNumber, String empName) {
 		this.empNumber = empNumber;
 		this.empName = empName;
 	}
